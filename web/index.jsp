@@ -21,7 +21,7 @@
                         <a href="#" class="pull-left toggle-sidebar-collapse"><i class="fa fa-bars"></i></a>
                         <!-- logo -->
                         <div class="pull-left left logo">
-                            <a href="index.jsp"><img src="assets/img/kingadmin-logo-white.png" alt="KingAdmin - Admin Dashboard" /></a>
+                            <a href="index.jsp"><img src="assets/img/kingadmin-logo-white2.png" alt="KingAdmin - Admin Dashboard" /></a>
                             <h1 class="sr-only">RFID</h1>
                         </div>
                         <!-- end logo -->
@@ -97,6 +97,7 @@
                                     <i class="toggle-icon fa fa-angle-down"></i></a>
                                 <ul class="sub-menu ">
                                     <li><a  onclick="BuscarEstudiante()" style='cursor: pointer' title="Buscar estudiantes" ><span class="text">Buscar estudiante</span></a></li>
+                                    <li><a  onclick="justificar()" style='cursor: pointer' title="Justificar" ><span class="text">Justificar Estudiante</span></a></li>
                                    
                                 </ul>
                             </li>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : materia
-    Created on : Dec 31, 2018, 10:26:53 PM
+    Document   : estudiante
+    Created on : Feb 1, 2019, 12:04:26 PM
     Author     : WebMaster
 --%>
 
@@ -16,12 +16,12 @@
                 <legend>Consulta por materia y fecha</legend>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Código de materia</label>
+                    <label class="col-sm-3 control-label">Cédula</label>
                     <div class="col-sm-3">
-                        <input type="text"required class="form-control" id="txtCodMateria" value="IS24178" placeholder="Código de materia" >
+                        <input type="text"required class="form-control" id="txtCedula" value="070469122-9" placeholder="Cédula" >
                     </div>
                    <div class="col-sm-3">
-                        <a onclick="ConsultaxMateria()" >
+                        <a onclick="ConsultaxEstudiante()" >
                             <input type="button" id="btnGuardar" class="btn btn-primary btn-block" value="GENERAR"/>
                         </a>
                     </div>

@@ -16,7 +16,7 @@
  String json="";
     AccesoDatos ac=new AccesoDatos ();
     ac.Connectar();
-        String SQL = "SELECT * from tbl_usuarios where(txttipo='Estudiante')";
+        String SQL = "SELECT ut.txtcedula,us.txtapellidos,us.txtnombres,ta.intestado,us.txtcorreo from tbl_usuarios us inner join tbl_ut ut on us.txtcedula=ut.txtcedula inner join tbl_tarjeta ta on ta.txtcodtarjeta= ut.txtcodtarjeta where us.txttipo='Estudiante'";
         ac.EjecutarSQL(SQL);
     
             ResultSet rs = ac.getRs();
@@ -81,6 +81,7 @@
                 <th>Cedula</th>
                 <th>Apellidos</th>
                 <th>Nombres</th>
+                <th>Estado</th>
                 <th>Correo</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -93,6 +94,16 @@
                 <td><%= rs.getString("txtcedula")%></td>
                 <td><%= rs.getString("txtapellidos")%></td>
                 <td><%= rs.getString("txtnombres")%></td>
+                <%
+                    String estado = "";
+                        if (rs.getString("intestado").equals("0")) {
+                            estado = "Bloqueado";
+                        } else {
+                            estado = "Activo";
+
+                        }
+                %>
+                <td><%= estado%></td>
                 <td><%= rs.getString("txtcorreo")%></td>
                 <td ><button type="button" class="btn btn-warning"><i class="fa fa-pencil-square-o"></i> editar</button></td>
                 <td onclick="eliminarDocente('<%= rs.getString("txtcorreo")%>','1')"><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> eliminar</button></td>

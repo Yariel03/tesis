@@ -36,13 +36,16 @@
                 <div class="form-group">
                     <label for="ticket-name" class="col-sm-3 control-label">Código de Tarjeta RFID</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" id="txtCodigo" value='sdf5767adsf' placeholder="Código de Tarjeta RFID" disabled>
+                        <input type="text" class="form-control" id="txtCodigo" value='' placeholder="Código de Tarjeta RFID" disabled>
                     </div>
                     <div class="col-sm-4">
+                        <a onclick="LeerTarjeta()">
+                            
                         <button type="button" class="btn btn-default" id="btnLeer" disabled>
                             <i class="fa fa-eye"></i> 
                             Leer Tarjeta RFID
                         </button>
+                        </a>
                        
                     </div>
                 </div>
